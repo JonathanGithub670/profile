@@ -1,0 +1,23 @@
+
+> portfolio@0.1.0 lint
+> eslint
+
+
+C:\xampp\htdocs\Portofolio\portfolio\src\components\layout\Navbar.tsx
+  3:20  warning  'useEffect' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\xampp\htdocs\Portofolio\portfolio\src\components\sections\About.tsx
+   4:8    warning  'Card' is defined but never used                                 @typescript-eslint/no-unused-vars
+  34:29   error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  37:138  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\xampp\htdocs\Portofolio\portfolio\src\components\sections\Contact.tsx
+  16:65   error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  19:27   error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  19:157  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\xampp\htdocs\Portofolio\portfolio\src\components\sections\Hero.tsx
+  28:18  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+✖ 8 problems (6 errors, 2 warnings)
+
