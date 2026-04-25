@@ -41,7 +41,7 @@ export default function About() {
                 </p>
 
                 <div className="grid grid-cols-2 gap-4">
-                    {['JavaScript (ES6+)', 'React', 'Next.js', 'Node.js', 'TypeScript', 'Tailwind CSS'].map((tech) => (
+                    {['Vue.js', 'Next.js', 'Express.js', 'Laravel', 'Golang', 'Rust', 'Python', 'Flutter', 'React Native'].map((tech) => (
                         <div key={tech} className="flex items-center gap-2 text-sm text-white/80">
                             <span className="text-blue-500">▹</span> {tech}
                         </div>

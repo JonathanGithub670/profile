@@ -246,7 +246,7 @@ function Band({
   const rot = new Vector3();
   const dir = new Vector3();
 
-  const { nodes, materials } = useGLTF("/model/card.glb") as any;
+  const { nodes, materials } = useGLTF("/lanyard/card_original.glb") as any;
   const texture = useTexture("/lanyard/lanyard.png");
   const cardTexture = useTexture(cardImage || "/lanyard/lanyard.png");
 
