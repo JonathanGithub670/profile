@@ -10,6 +10,13 @@ import type { RapierRigidBody } from "@react-three/rapier";
 // Extend meshline components
 extend({ MeshLineGeometry, MeshLineMaterial });
 
+declare module "@react-three/fiber" {
+  interface ThreeElements {
+    meshLineGeometry: any;
+    meshLineMaterial: any;
+  }
+}
+
 // Types
 import { Mesh, Vector3, CatmullRomCurve3 } from "three";
 
