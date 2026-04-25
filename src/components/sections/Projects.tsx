@@ -10,14 +10,14 @@ const projects = [
   {
     title: 'Stock Analysis App',
     description: 'A stock analysis application that provides real-time market data, technical indicators, and portfolio tracking with high-performance backend processing.',
-    image: '/image/aplikasi-analisis-saham.jpg',
+    image: '/image/aplikasi-analisis-saham.png',
     tags: ['Next.js', 'Rust', 'Python FastAPI', 'Docker', 'Redis'],
     links: { demo: 'http://72.60.43.25:3000/', github: '#' },
   },
   {
     title: 'Bidding App',
     description: 'A live auction bidding platform where users can participate in real-time auctions, place bids, and win premium items from verified sellers.',
-    image: '/image/Aplikasi-Bidding.jpg',
+    image: '/image/Aplikasi-Bidding.png',
     tags: ['React.js', 'Laravel', 'Docker', 'Redis', 'WebSocket'],
     links: { demo: 'http://72.60.43.25:8081/', github: '#' },
   },
