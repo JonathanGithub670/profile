@@ -8,6 +8,20 @@ import { ExternalLink, Github, X, Youtube } from 'lucide-react';
 
 const projects = [
   {
+    title: 'Stock Analysis App',
+    description: 'A stock analysis application that provides real-time market data, technical indicators, and portfolio tracking with high-performance backend processing.',
+    image: '/image/stock.png',
+    tags: ['Next.js', 'Rust', 'Python FastAPI', 'Docker', 'Redis'],
+    links: { demo: 'http://72.60.43.25:3000/', github: '#' },
+  },
+  {
+    title: 'Real-Time Chat App',
+    description: 'A real-time chat application with instant messaging, live notifications, and seamless communication powered by WebSocket technology.',
+    image: '/image/chat.png',
+    tags: ['React.js', 'Laravel', 'Docker', 'Redis', 'WebSocket'],
+    links: { demo: 'http://72.60.43.25:8081/', github: '#' },
+  },
+  {
     title: 'Company Website with Attendance',
     description: 'A comprehensive company website integrated with an attendance system. Features include employee management and real-time tracking.',
     image: '/image/company.png',
@@ -26,7 +40,7 @@ const projects = [
     description: 'An application for scheduling appointments. Users can browse available slots and book appointments easily.',
     image: '/image/laravel.png',
     tags: ['Laravel', 'React.js', 'MySQL'],
-    links: { demo: '#', github: 'https://github.com/JonathanGithub670/aplikasi-janji-temu-dosen', youtube: 'https://youtu.be/gX8hT56Bj4g' },
+    links: { demo: 'http://72.60.43.25:8080/', github: 'https://github.com/JonathanGithub670/aplikasi-janji-temu-dosen', youtube: 'https://youtu.be/gX8hT56Bj4g' },
   },
 ];
 
