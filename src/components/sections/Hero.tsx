@@ -37,13 +37,17 @@ export default function Hero() {
           </p>
           
           <div className="flex flex-col md:flex-row items-center justify-center lg:justify-start gap-4">
-            <Button variant="primary" className="flex items-center gap-2 group">
-              View Projects 
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button variant="secondary" className="flex items-center gap-2">
-              Contact Me
-            </Button>
+            <a href="#projects" onClick={(e) => { e.preventDefault(); document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' }); }}>
+              <Button variant="primary" className="flex items-center gap-2 group">
+                View Projects 
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </a>
+            <a href="#contact" onClick={(e) => { e.preventDefault(); document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' }); }}>
+              <Button variant="secondary" className="flex items-center gap-2">
+                Contact Me
+              </Button>
+            </a>
           </div>
 
           <div className="mt-12 flex items-center justify-center lg:justify-start gap-6 text-white/40">

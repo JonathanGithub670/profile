@@ -19,7 +19,7 @@ export default function Contact() {
                 Although I&apos;m not currently looking for any new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I&apos;ll try my best to get back to you!
             </p>
             
-            <a href="mailto:example@email.com">
+            <a href="mailto:lumbantechsolution@gmail.com">
                 <Button variant="outline" className="px-8 py-4 text-lg border-blue-500 text-blue-400 hover:bg-blue-500/10">
                     <Mail className="inline-block mr-2 w-5 h-5" />
                     Say Hello

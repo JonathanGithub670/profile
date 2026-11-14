@@ -6,8 +6,17 @@ import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
 import clsx from 'clsx';
 import Button from '../ui/Button';
 
+function scrollToSection(e: React.MouseEvent<HTMLAnchorElement>, href: string) {
+  e.preventDefault();
+  const target = document.querySelector(href);
+  if (target) {
+    target.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
   const { scrollY } = useScroll();
 
   useMotionValueEvent(scrollY, "change", (latest) => {
@@ -37,26 +46,54 @@ export default function Navbar() {
 
         <div className="hidden md:flex items-center space-x-8">
           {links.map((link) => (
-            <Link
+            <a
               key={link.name}
               href={link.href}
-              className="text-sm font-medium text-white/70 hover:text-white transition-colors"
+              onClick={(e) => scrollToSection(e, link.href)}
+              className="text-sm font-medium text-white/70 hover:text-white transition-colors cursor-pointer"
             >
               {link.name}
-            </Link>
+            </a>
           ))}
-          <Button variant="primary" className="px-5 py-2 text-sm shadow-none">
-            Hire Me
-          </Button>
+          <a href="#contact" onClick={(e) => scrollToSection(e, '#contact')}>
+            <Button variant="primary" className="px-5 py-2 text-sm shadow-none">
+              Hire Me
+            </Button>
+          </a>
         </div>
 
-        {/* Mobile menu - simplified for now */}
+        {/* Mobile menu */}
         <div className="md:hidden">
-            <Button variant="ghost" className="p-2">
-                <span className="text-xl">☰</span>
+            <Button variant="ghost" className="p-2" onClick={() => setMobileOpen(!mobileOpen)}>
+                <span className="text-xl">{mobileOpen ? '✕' : '☰'}</span>
             </Button>
         </div>
       </div>
+
+      {/* Mobile menu dropdown */}
+      {mobileOpen && (
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="md:hidden bg-black/90 backdrop-blur-xl border-b border-white/10 px-6 py-4 flex flex-col space-y-4"
+        >
+          {links.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              onClick={(e) => { scrollToSection(e, link.href); setMobileOpen(false); }}
+              className="text-sm font-medium text-white/70 hover:text-white transition-colors"
+            >
+              {link.name}
+            </a>
+          ))}
+          <a href="#contact" onClick={(e) => { scrollToSection(e, '#contact'); setMobileOpen(false); }}>
+            <Button variant="primary" className="px-5 py-2 text-sm shadow-none w-full">
+              Hire Me
+            </Button>
+          </a>
+        </motion.div>
+      )}
     </motion.nav>
   );
 }
